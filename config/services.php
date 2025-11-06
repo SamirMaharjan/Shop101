@@ -15,11 +15,11 @@ return [
     */
 
     'postmark' => [
-        'key' => env('POSTMARK_API_KEY'),
+        'token' => env('POSTMARK_TOKEN'),
     ],
 
     'resend' => [
-        'key' => env('RESEND_API_KEY'),
+        'key' => env('RESEND_KEY'),
     ],
 
     'ses' => [
@@ -33,6 +33,14 @@ return [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
+    ],
+    
+    'shopify' => [
+        'client_id' => env('SHOPIFY_API_KEY'),
+        'client_secret' => env('SHOPIFY_API_SECRET'),
+        'scopes' => env('SHOPIFY_SCOPES', 'read_products,write_products'),
+        'redirect_uri' => env('SHOPIFY_REDIRECT_URI'),
+        'embedded_app_url' => env('SHOPIFY_EMBEDDED_APP_URL'),
     ],
 
 ];
